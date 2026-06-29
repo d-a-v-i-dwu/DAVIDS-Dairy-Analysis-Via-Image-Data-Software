@@ -200,20 +200,18 @@ def analyze_csv(p: dict):
 
 FEATURE_COLUMNS = ["num_components", "cyclomatic_number", "mean_network_width", "network_percentage", "tortuosity", "link_density", "lacunarity", "fractal_dimension", "num_branches", "tip_tip_branches", "tip_junction_branches", "junction_junction_branches", "cycles", "avg_branch_length", "total_branch_length", "max_branch_length", "num_end_points", "end_point_density", "num_junctions", "junction_density", "avg_junction_degree"]
 
+# Test call
 if __name__ == "__main__":
     p = {
-        # Input source
         "input_type": "single_csv",
         "csv_path": "",
         "csv_folder_path": "",
-        # Output options
         "output_folder": "",
         "save_rf_performance": True,
         "save_confusion_matrix": True,
         "save_shap": True,
         "sort_shap": True,
         "save_pairplots": True,
-        # RF parameters
         "max_depth": 5,
         "n_estimators": 128,
         "min_samples_split": 20,

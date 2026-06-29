@@ -143,7 +143,7 @@ def csv_analysis_server(input, output, session):
                 ui.notification_show(f"File not found: {p['csv_path']}", type="error", duration=4)
                 return
 
-        if any([p["save_rf_performance"], p["save_confusion_matrix"], p["save_shap"], p["save_pairplots"], p["save_distributions"]]) and not p["output_folder"]:
+        if any([p["save_rf_performance"], p["save_confusion_matrix"], p["save_shap"], p["save_pairplots"]]) and not p["output_folder"]:
             ui.notification_show("Please enter an output folder path.", type="error", duration=4)
             return
 

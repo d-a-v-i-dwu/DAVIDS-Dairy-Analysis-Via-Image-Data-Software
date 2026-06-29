@@ -542,12 +542,13 @@ def process_images(p: dict):
 
 FEATURE_COLUMNS = ["num_components", "cyclomatic_number", "mean_network_width", "network_percentage", "tortuosity", "link_density", "lacunarity", "fractal_dimension", "num_branches", "tip_tip_branches", "tip_junction_branches", "junction_junction_branches", "cycles", "avg_branch_length", "total_branch_length", "max_branch_length", "num_end_points", "end_point_density", "num_junctions", "junction_density", "avg_junction_degree"]
 
+# Test call
 if __name__ == "__main__":
     p = {
         "input_type": "folder",
-        "parent_folder_path": "Data\Rheology\Processed_cheese",
-        "subfolder_labels": ["Anchor B2", "Anchor B3", "Chesdale B1", "Chesdale B2"],
-        "folder_path": "Data\Rheology\Confocals",
+        "parent_folder_path": "",
+        "subfolder_labels": [],
+        "folder_path": "",
         "folder_label": "",
         "file_path": None,
         "file_label": None,
@@ -555,10 +556,10 @@ if __name__ == "__main__":
         "max_images_subfolder": 0,
         "max_images": 0,
         "resize_to": 0,
-        "output_folder": "Raman",
+        "output_folder": "",
         "save_masks": True,
         "save_skeletons": True,
-        "save_components": False,
+        "save_components": True,
         "save_csvs": True,
         "save_graphs": True,
         # Parameters
@@ -570,8 +571,8 @@ if __name__ == "__main__":
         "remove_small_holes": 0,
         "remove_small_objects": 0,
         "closing": 0,
-        "opening": 1,
-        "prune_branches": 16,
+        "opening": 0,
+        "prune_branches": 0,
     }
 
     process_images(p)

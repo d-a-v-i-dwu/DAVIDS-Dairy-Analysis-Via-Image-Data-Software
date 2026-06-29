@@ -87,7 +87,7 @@ def mask_generation_ui():
                     ui.input_numeric("saturation", "Saturation", min=0, max=1, value=0.4, step=0.01),
                     ui.input_numeric("value", "Value", min=0, max=1, value=0.27, step=0.01),
                     ui.tags.h6("Morphological Operations", style="margin-top:0.75rem; text-decoration: underline"),
-                    ui.input_numeric("opening", "Opening", min=1, max=20, value=5, step=1),
+                    ui.input_numeric("opening", "Opening", min=1, max=20, value=0, step=1),
                     ui.input_numeric("closing", "Closing", min=1, max=20, value=0, step=1),
                     ui.input_numeric("remove_small_holes", "Remove small holes", min=0, max=100, value=0, step=1),
                     ui.input_numeric("remove_small_objects", "Remove small objects", min=0, max=100, value=0, step=1),

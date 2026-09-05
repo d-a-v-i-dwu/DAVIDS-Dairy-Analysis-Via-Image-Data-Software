@@ -31,7 +31,7 @@ def mask_generation_ui():
                     ui.panel_conditional(
                         "input.input_type === 'file'",
                         ui.input_text("file_path", "File path", placeholder="/data/image"),
-                        ui.input_text("image_label", "Image label", placeholder="Image A"),
+                        ui.input_text("file_label", "File label", placeholder="Image A"),
                     ),
                 ),
                 open=True,
@@ -126,7 +126,7 @@ def mask_generation_server(input, output, session):
             "folder_path": input.folder_path() if input.input_type() == "folder" else None,
             "folder_label": input.folder_label() if input.input_type() == "folder" else None,
             "file_path": input.file_path() if input.input_type() == "file" else None,
-            "image_label": input.image_label() if input.input_type() == "file" else None,
+            "file_label": input.file_label() if input.input_type() == "file" else None,
             # Output options
             "max_images_subfolder": input.max_images_subfolders() if input.input_type() == "parent_folder" else 0,
             "max_images": input.max_images() if input.input_type() == "folder" else 0,

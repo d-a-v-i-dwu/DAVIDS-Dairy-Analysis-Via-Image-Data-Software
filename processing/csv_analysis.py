@@ -41,8 +41,9 @@ def rf_performance(X, y, save_rf_perfomrance, output_folder, save_confusion_matr
         report = classification_report(y_test, y_pred, output_dict=True, zero_division=0)
         reports.append(report)
 
-        y_pred_cv = cross_val_predict(rf, X, y, cv=10)
-        cm = confusion_matrix(y, y_pred_cv)
+    rf_cv = RandomForestClassifier(n_estimators=n_estimators, random_state=42, max_depth=max_depth, min_samples_split=min_samples_split, min_samples_leaf=min_samples_leaf)
+    y_pred_cv = cross_val_predict(rf_cv, X, y, cv=skf)
+    cm = confusion_matrix(y, y_pred_cv)
 
     # Create confusion matrix
     fig_cm, ax_cm = plt.subplots()
